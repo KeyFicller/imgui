@@ -4,8 +4,8 @@ project "imgui"
     cppdialect "C++17"
     staticruntime "on"
     
-    targetdir(g_workspaceDir .. "/bin/" .. g_outputDir .. "/%{prj.name}")
-    objdir(g_workspaceDir .. "/bin-int/" .. g_outputDir .. "/%{prj.name}")
+    targetdir(envir_work_space_directory .. "/bin/" .. envir_output_directory .. "/%{prj.name}")
+    objdir(envir_work_space_directory .. "/bin-int/" .. envir_output_directory .. "/%{prj.name}")
 
     defines {"_CRT_SECURE_NO_WARNINGS"}
 
