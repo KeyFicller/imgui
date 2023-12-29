@@ -21,9 +21,20 @@ project "imgui"
         "imstb_textedit.h",
         "imstb_truetype.h",
         "imgui_demo.cpp",
-        "imgui_tables.cpp"
+        "imgui_tables.cpp",
+        "backends/imgui_impl_opengl3.h",
+        "backends/imgui_impl_opengl3.cpp",
+        "backends/imgui_impl_glfw.h",
+        "backends/imgui_impl_glfw.cpp",
+        "premake5.lua"
     }
-    
+
+    includedirs {
+        ".",
+        "bakcends",
+        envir_thrid_party_directory .. "/glfw/include",
+    }
+
     filter "system:windows"
         systemversion "latest"
         
@@ -34,3 +45,7 @@ project "imgui"
 	filter "configurations:Release"
 		runtime "Release"
 		optimize "on"
+
+    links {
+        "glfw"
+    }
