@@ -32,7 +32,7 @@ project "imgui"
     includedirs {
         ".",
         "bakcends",
-        envir_thrid_party_directory .. "/glfw/include",
+        envir_third_party_directory .. "/glfw/include",
     }
 
     filter "system:windows"
